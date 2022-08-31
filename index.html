@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220818200354">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220831125936">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -50,7 +50,8 @@
 							<div class="main-block__subtitle">Для бизнеса и его первых лиц</div>
 						</div>
 					</div>
-					<a class="main-block__btn button" href="#">Записаться на консультацию</a>
+					<button type="button" data-popup="#popup-1" class="main-block__btn button">Записаться на
+						консультацию</button>
 				</div>
 			</section>
 			<section class="page__about about">
@@ -66,7 +67,9 @@
 								Постоянный коллектив из 20 человек - журналисты Коммерсанта, ТАСС и Forbes и PR-менеджеры с
 								экспертизой от 5 лет. Мы умеем системно работать с большими компаниями, с душой погружаемся в
 								задачи стартапов и деликатно подходим к работе с личным брендом.</p>
-							<a class="about__btn button" href="#">Записаться на консультацию</a>
+							<!--<a class="about__btn button" href="#">Записаться на консультацию</a>-->
+							<button type="button" data-popup="#popup-1" class="about__btn button">Записаться на
+								консультацию</button>
 						</div>
 					</div>
 				</div>
@@ -836,17 +839,46 @@
 			</div>
 		</footer>
 	</div>
-	<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+	<div id="popup-1" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup-consultation__body">
+					<button data-close type="button" class="popup-consultation__close"><img src="img/popup/icon-popup.svg" alt=""></button>
+					<div class="popup-consultation-form">
+						<h3 class="popup-consultation-form__title">Запишись на консультацию</h3>
+						<form class="popup-consultation-form__body" id="form" action="#">
+							<div class="popup-consultation-form__item">
+								<label for="formName" class="popup-consultation-form__label">Ваше имя</label>
+								<input id="formName" type="text" name="name" class="popup-consultation-form__input">
+							</div>
+							<div class="popup-consultation-form__item">
+								<label for="formPhone" class="popup-consultation-form__label">Номер телефона</label>
+								<input id="formPhone" type="tel" name="phone" class="popup-consultation-form__input">
+							</div>
+							<button data-popup="#popup-2" type="submit" class="popup-consultation-form__btn  button button--purple">записаться</button>
+						</form>
+					</div>
+					<p class="popup-consultation__text">Нажимая на кнопку, вы даете согласие на обработку персональных данных и
+						соглашаетесь с политикой конфиденциальности.</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div> -->
-	<script src="js/app.min.js?_v=20220818200354"></script>
+
+
+	<div id="popup-2" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<!--<button data-close type="button" class="popup__close">Закрыть</button>-->
+				<div class="info-popup__body">
+					<button data-close type="button" class="info-popup__close"><img src="img/popup/icon-popup.svg" alt=""></button>
+					<h3 class="info-popup__title">Ваша заявка принята!</h3>
+					<p class="info-popup__text">В ближайшее время наш менеджер свяжется с вами и ответит на все вопросы!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220831125936"></script>
 </body>
 
 </html>
